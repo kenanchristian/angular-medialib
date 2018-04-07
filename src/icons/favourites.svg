@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>favourites</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="favourites" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M-8.58479954e-14,64.0015479 C-8.58479954e-14,28.6518648 28.6538401,2.74498306e-15 63.9989681,2.74498306e-15 C99.3459019,2.74498306e-15 128,28.6521227 128,64.0015479 C128,99.3460714 99.3459019,128 63.9989681,128 C28.6538401,128 -8.58479954e-14,99.3460714 -8.58479954e-14,64.0015479 Z" id="Shape" fill="#E5CD17" fill-rule="nonzero"></path>
+        <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="63.4979474 23 76.0179252 48.3436064 104 52.4129352 83.7471777 72.139447 88.5278967 100 63.4979474 86.8464275 38.4651758 100 43.2471777 72.139447 23 52.4129352 50.9859233 48.3436064"></polygon>
+    </g>
+</svg>

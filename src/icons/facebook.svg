@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M63.9997803,0 C99.3479725,0 128,28.6559819 128,64.0002197 C128,99.3484119 99.3479725,128 63.9997803,128 C28.6515881,128 0,99.3479725 0,64.0002197 C0,28.6559819 28.6520275,0 63.9997803,0 Z" id="Shape" fill="#3B5998" fill-rule="nonzero"></path>
+        <path d="M71.7745584,44.1840738 L80,44.1840738 L80,32 L70.3307682,32 L70.3307682,32.0439382 C58.6148158,32.4600334 56.2136108,39.0639507 56.0019718,46.0000412 L55.9778721,46.0000412 L55.9778721,52.0841692 L48,52.0841692 L48,64.0160375 L55.9778721,64.0160375 L55.9778721,96 L68.0009859,96 L68.0009859,64.0160375 L77.8498699,64.0160375 L79.7524305,52.0841692 L68.0049295,52.0841692 L68.0049295,48.4082961 C68.0049295,46.064191 69.5604546,44.1840738 71.7745584,44.1840738 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

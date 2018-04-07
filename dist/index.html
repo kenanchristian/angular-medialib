@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS Media Library Directive</title>
+    <link rel="stylesheet" href="medialib.css" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
+  </head>
+  <body ng-app="mediaApp" ng-controller="AppController as manager">
+    <!-- application -->
+    <div class="container">
+      <div class="page">
+        <h2>Page Title</h2>
+        <img medialib-drop="onMedialibDrop(item, target)" src="https://cdn.magloft.com/secure/3899/cover/e4e33b16-fa65-4c2e-b6d8-8b595df83609/cover.jpg" ng-click="manager.open()" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+    </div>
+    <medialib-modal>
+      <medialib></medialib>
+    </medialib-modal>
+    
+    <!-- vendor -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/4.0.1/Dropbox-sdk.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- medialib -->
+    <script type="text/javascript" src="medialib.js"></script>
+    
+    <!-- plugins -->
+    <script type="text/javascript" src="plugins/medialib.zoom.js"></script>
+    <script type="text/javascript" src="plugins/medialib.local.js"></script>
+    <script type="text/javascript" src="plugins/medialib.magloft.js"></script>
+    <script type="text/javascript" src="plugins/medialib.dropbox.js"></script>
+    <script type="text/javascript" src="plugins/medialib.googledrive.js"></script>
+    <script type="text/javascript" src="plugins/medialib.unsplash.js"></script>
+    <script type="text/javascript" src="plugins/medialib.drag.js"></script>
+    <script type="text/javascript" src="plugins/medialib.favourites.js"></script>
+    <script type="text/javascript" src="plugins/medialib.selection.js"></script>
+    
+    <!-- application -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>flickr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="flickr" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M63.499782,0 C98.5718165,0 127,28.6559819 127,64.0002197 C127,99.3484119 98.5718165,128 63.499782,128 C28.4277476,128 7.06171233e-14,99.3479725 7.06171233e-14,64.0002197 C7.06171233e-14,28.6559819 28.4281835,0 63.499782,0 Z" id="Shape" fill="#FB1684" fill-rule="nonzero"></path>
+        <path d="M60,64.0019819 C60,72.8347165 52.8388264,80 44,80 C35.1611736,80 28,72.835157 28,64.0019819 C28,55.1688069 35.1611736,48 44,48 C52.8388264,48 60,55.1692473 60,64.0019819 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M100,64.0019819 C100,72.8347165 92.8387283,80 83.9997806,80 C75.160833,80 68,72.835157 68,64.0019819 C68,55.1688069 75.1612717,48 83.9997806,48 C92.8382895,48 100,55.1692473 100,64.0019819 Z" id="Shape" fill="#EEEEEE" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+medialib-breadcrumb {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex: 1;
+  
+  .medialib-breadcrum-item {
+    text-decoration: none;
+    color: #444444;
+    font-weight: 400;
+    margin-right: 4px;
+    
+    div.medialib-breadcrumb-item-title {
+      display: inline-block;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      line-height: 24px;
+      padding: 0px 2px;
+    }
+    
+    &:after {
+      content: "»";
+      display: inline-block;
+      color: #CCCCCC;
+    }
+    
+    &:last-child:after {
+      display: none;
+    }
+    
+    &:hover {
+      color: #171717;
+      
+      div.medialib-breadcrumb-item-title {
+        border-bottom: 2px solid #DDDDDD;
+      }
+    }
+  }
+}
