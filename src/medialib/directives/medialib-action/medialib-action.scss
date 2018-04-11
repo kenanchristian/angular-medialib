@@ -1,0 +1,18 @@
+medialib-action {  
+  i.mli {
+    display: block;
+    margin: 0px 2px;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+    transition: opacity 250ms, background-color 250ms;
+  
+    &:hover, &.active {
+      box-shadow: 0px 0px 0px 1px #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+medialib {
+  display: block;
+  position: relative;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  font-family: "Helvetica Neue", Helvetica;
+  color: #666;
+  font-size: 15px;
+  font-weight: 100;
+  box-sizing: border-box;
+  max-width: calc(100vw - 32px);
+  
+  .medialib-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-size: contain;
+    background-color: rgba(0,0,0,0.75);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.medialib-navbar {
+  height: 48px;
+  line-height: 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  
+  .medialib-navbar-library-title {
+    padding: 0px 12px;
+  }
+  
+  .medialib-navbar-title {
+    flex: 1;
+    font-weight: 500;
+    color: #171717;
+  }
+  
+  .medialib-navbar-action {
+    
+  }
+  
+  .medialib-navbar-info {
+    color: #AAAAAA;
+  }
+}
+
+.medialib-sidebar {
+  width: 0;
+  background: #F5F5F5;
+  border-right: 1px solid #EEEEEE;
+  overflow: hidden;
+  transition: width 200ms;
+  
+  &.active {
+    width: 200px;
+  }
+  
+  a.medialib-sidebar-item {
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: row;
+    color: #171717;
+    text-decoration: none;
+    padding: 8px;
+    
+    &.active {
+      background: #FFFFFF;
+    }
+    
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      object-fit: contain;
+    }
+    
+    span {
+      display: block;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.medialib-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 100%;
+}
+
+.medialib-bars {
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  background-image: linear-gradient(transparent 3px, #000 3px, #000 6px, transparent 6px, transparent 9px, #000 9px, #000 12px, transparent 12px, transparent 15px, #000 15px, #000 18px, transparent 18px);
+  cursor: pointer;
+  opacity: 0.35;
+  transition: opacity 250ms;
+  margin: 0px 10px;
+  
+  &:hover {
+    opacity: 75;
+  }
+}
+
+.medialib-close {
+  height: 48px;
+  line-height: 40px;
+  font-size: 42px;
+  width: 48px;
+  text-align: center;
+  color: #CCCCCC;
+  text-decoration: none;
+  
+  &:hover {
+    color: #171717;
+  }
+}

@@ -1,0 +1,72 @@
+medialib-transactions {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 300px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms;
+  
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .medialib-transaction-item {
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+    overflow: hidden;
+    height: 56px;
+    transition: opacity 500ms, height 500ms, box-shadow 500ms;
+    
+    &.dismissed {
+      opacity: 0;
+      height: 0px;
+      box-shadow: none;
+    }
+
+    .medialib-transaction-progress {
+      display: block;
+      height: 56px;
+      width: 56px;
+      padding: 8px;
+    }
+    
+    .medialib-transaction-body {
+      flex: 1;
+      padding: 8px 0px;
+
+      .medialib-transaction-title {
+        line-height: 20px;
+        color: #666666;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      
+      .medialib-transaction-message {
+        line-height: 20px;
+        color: #999999;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+    
+    .medialib-transaction-action {
+      padding: 8px;
+      height: 56px;
+      line-height: 32px;
+      font-size: 40px;
+      width: 56px;
+      text-align: center;
+      color: #CCCCCC;
+      text-decoration: none;
+      cursor: pointer;
+      
+      &:hover {
+        color: #171717;
+      }
+    }
+  }
+}

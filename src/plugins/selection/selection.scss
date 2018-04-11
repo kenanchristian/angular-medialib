@@ -1,0 +1,41 @@
+.medialib-selection-panel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: #F5F5F5;
+  border-top: 1px solid #EEE;
+  padding: 4px;
+  
+  .medialib-selection-thumbnails {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    
+    .medialib-selection-thumbnail {
+      margin-right: 4px;
+      cursor: pointer;
+      
+      img {
+        border: 1px solid #FFFFFF;
+        height: 48px;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+        display: block;
+      }
+    }
+  }
+}
+
+medialib-item.selected {
+  medialib-image {  
+    box-shadow: 0px 0px 0px 4px #5586c7;
+  }
+}
+
+medialib-item.selected {
+  i.mli.action-select {
+    opacity: 1;
+    background-color: #266D9E;
+    box-shadow: 0px 0px 0px 1px #FFFFFF;
+  }
+}

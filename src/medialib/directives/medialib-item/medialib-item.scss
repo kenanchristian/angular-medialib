@@ -1,0 +1,45 @@
+medialib-item {
+  position: relative;
+  margin: 10px;
+  text-align: center;
+  
+  .medialib-title {
+    font-size: 11px;
+    color: #999;
+    line-height: 28px;
+    height: 28px;
+    transition: line-height 250ms;
+  }
+}
+
+.medialib-card {
+  height: 128px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1px;
+  position: relative;
+
+  .medialib-actions {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 250ms;
+  }
+  
+  &:hover {
+    .medialib-actions {
+      background-color: rgba(0,0,0,0.33);
+      
+      i.mli {
+        opacity: 1;
+      }
+    }
+  }
+}
