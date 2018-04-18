@@ -1,7 +1,6 @@
 import fs from "fs"
 import gulp from "gulp"
 import SVGO from "svgo"
-import rollup from "gulp-rollup"
 import rename from "gulp-rename"
 import connect from "gulp-connect"
 import scss from "postcss-scss"
@@ -9,20 +8,25 @@ import url from "postcss-url"
 import nested from "postcss-nested"
 import postcss from "gulp-postcss"
 import concat from "gulp-concat"
+import rollup from "gulp-better-rollup"
+import ngAnnotate from "gulp-ng-annotate"
+import babel from "rollup-plugin-babel"
+import uglify from 'gulp-uglify'
+import cssnano from 'gulp-cssnano'
 import config from "./package.json"
 
 gulp.task("js", () => {
-  return gulp.src("./src/medialib/**/*.js")
-    .pipe(rollup({ input: "./src/medialib/medialib.js", output: { format: "iife", name: "medialib" } }))
+  return gulp.src("./src/medialib/medialib.js")
+    .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ name: "medialib", format: "iife" }))
     .pipe(gulp.dest("./dist/"))
 })
 
 gulp.task("plugins", () => {
   for (const plugin of config.plugins) {
-    gulp.src([`./src/plugins/${plugin.identifier}/**/*.js`, ...plugin.sources])
-      .pipe(rollup({ input: `./src/plugins/${plugin.identifier}/${plugin.identifier}.js`, output: { format: "iife", name: `medialib_${plugin.identifier}` } }))
+    gulp.src(`./src/plugins/${plugin.identifier}/${plugin.identifier}.js`)
+      .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ name: `medialib_${plugin.identifier}`, format: "iife" }))
       .pipe(rename(`medialib.${plugin.identifier}.js`))
-      .pipe(gulp.dest("./dist/plugins/"))
+      .pipe(gulp.dest("./dist/plugins"))
   }
 })
 
@@ -102,4 +106,30 @@ gulp.task("icons", (callback) => {
 })
 
 gulp.task("default", ["css", "serve", "watch"])
-gulp.task("dist", ["js", "plugins", "css"])
+
+gulp.task("dist:js", ["js"], () => {
+  return gulp.src("dist/medialib.js")
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(rename("medialib.min.js"))
+    .pipe(gulp.dest("./dist/"))
+})
+
+gulp.task("dist:plugins", ["plugins"], () => {
+  return gulp.src(`./dist/plugins/*.js`)
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(rename(file => {
+      file.basename = `${file.basename}.min.js`
+    }))
+    .pipe(gulp.dest("./dist/plugins/"))
+})
+
+gulp.task("dist:css", ["css"], () => {
+  return gulp.src("dist/medialib.css")
+    .pipe(cssnano())
+    .pipe(rename("medialib.min.css"))
+    .pipe(gulp.dest("./dist/"))
+})
+
+gulp.task("dist", ["dist:js", "dist:plugins", "dist:css"])
