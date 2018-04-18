@@ -17,17 +17,16 @@ import config from "./package.json"
 
 gulp.task("js", () => {
   return gulp.src("./src/medialib/medialib.js")
-    .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ name: "medialib", format: "iife" }))
+    .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ format: "iife" }))
     .pipe(gulp.dest("./dist/"))
 })
 
 gulp.task("plugins", () => {
-  for (const plugin of config.plugins) {
-    gulp.src(`./src/plugins/${plugin.identifier}/${plugin.identifier}.js`)
-      .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ name: `medialib_${plugin.identifier}`, format: "iife" }))
-      .pipe(rename(`medialib.${plugin.identifier}.js`))
-      .pipe(gulp.dest("./dist/plugins"))
-  }
+  const files = config.plugins.map(plugin => `./src/plugins/${plugin.identifier}/${plugin.identifier}.js`)
+  return gulp.src(files)
+    .pipe(rollup({ plugins: [ babel({presets: [["env", { "modules": false }]], plugins: ["external-helpers", ["transform-builtin-extend", { globals: ["Array"] }]], babelrc: false}) ], },{ format: "iife" }))
+    .pipe(rename(file => { file.basename = `medialib.${file.basename}` }))
+    .pipe(gulp.dest("./dist/plugins"))
 })
 
 gulp.task("css", () => {
@@ -116,12 +115,11 @@ gulp.task("dist:js", ["js"], () => {
 })
 
 gulp.task("dist:plugins", ["plugins"], () => {
-  return gulp.src(`./dist/plugins/*.js`)
+  const files = config.plugins.map(plugin => `./dist/plugins/medialib.${plugin.identifier}.js`)
+  return gulp.src(files)
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(rename(file => {
-      file.basename = `${file.basename}.min.js`
-    }))
+    .pipe(rename(file => { file.basename = `${file.basename}.min` }))
     .pipe(gulp.dest("./dist/plugins/"))
 })
 
