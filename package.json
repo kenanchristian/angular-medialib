@@ -2,7 +2,7 @@
   "name": "angular-medialib",
   "version": "1.0.0",
   "description": "AngularJS Media Library Directive",
-  "main": "src/medialib/index.js",
+  "main": "src/medialib/medialib.js",
   "repository": "https://github.com/magloft/angular-medialib",
   "author": "MagLoft",
   "license": "MIT",
