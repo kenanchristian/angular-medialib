@@ -2,3 +2,4 @@
 /node_modules/*
 /dist/medialib*
 /dist/plugins/*
+yarn-error.log
