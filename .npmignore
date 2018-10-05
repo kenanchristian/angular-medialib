@@ -2,7 +2,8 @@ design
 .babelrc
 .eslintignore
 .eslintrc.json
-gulpfile.babel.js
+webpack.config.js
+yarn-error.log
 index.html
 yarn.lock
 dist/index.html
