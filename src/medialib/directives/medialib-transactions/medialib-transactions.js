@@ -1,3 +1,4 @@
+import "./medialib-transactions.scss"
 import template from "./medialib-transactions.html.js"
 
 angular.module("medialib")

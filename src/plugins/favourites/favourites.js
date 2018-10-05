@@ -1,3 +1,5 @@
+import "./favourites.scss"
+
 angular.module("medialib-favourites", ["medialib"])
 
 .directive("medialibFavourite", () => ({

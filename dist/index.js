@@ -1,4 +1,4 @@
-angular.module("mediaApp", ["medialib", "medialib-unsplash", "medialib-favourites", "medialib-zoom", "medialib-selection", "medialib-drag"])
+angular.module("mediaApp", ["medialib", "medialib-unsplash", "medialib-favourites", "medialib-zoom", "medialib-selection", "medialib-drag", "medialib-magloft"])
 
 .config((MedialibConfigProvider) => {
   MedialibConfigProvider.setOptions({ defaultAction: "zoom" })
@@ -14,11 +14,11 @@ angular.module("mediaApp", ["medialib", "medialib-unsplash", "medialib-favourite
       target.attr("src", src)
     })
   }
-  
+
   $timeout(() => {
     MedialibManager.sidebar = true
     MedialibManager.open()
   }, 1000)
-  
+
   return MedialibManager
 })

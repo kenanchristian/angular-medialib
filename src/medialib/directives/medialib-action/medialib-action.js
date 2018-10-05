@@ -1,3 +1,5 @@
+import "./medialib-action.scss"
+
 angular.module("medialib")
 
 .directive("medialibAction", MedialibManager => ({

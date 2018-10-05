@@ -1,3 +1,5 @@
+import "./medialib-image.scss"
+
 angular.module("medialib")
 
 .directive("medialibImage", MedialibManager => ({

@@ -1,3 +1,4 @@
+import "./medialib-modal.scss"
 import template from "./medialib-modal.html.js"
 
 angular.module("medialib")

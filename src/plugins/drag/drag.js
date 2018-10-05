@@ -1,3 +1,5 @@
+import "./drag.scss"
+
 angular.module("medialib-drag", ["medialib"])
 
 .directive("medialibDrag", (MedialibManager, $timeout) => ({

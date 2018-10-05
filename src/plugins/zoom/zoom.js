@@ -1,3 +1,4 @@
+import "./zoom.scss"
 import mediumZoom from "../../../node_modules/medium-zoom/dist/medium-zoom.es.js"
 
 angular.module("medialib-zoom", ["medialib"])

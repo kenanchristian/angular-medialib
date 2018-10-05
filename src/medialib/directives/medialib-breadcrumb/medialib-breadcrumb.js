@@ -1,3 +1,4 @@
+import "./medialib-breadcrumb.scss"
 import template from "./medialib-breadcrumb.html.js"
 
 angular.module("medialib")

@@ -16,6 +16,7 @@
         "object-property-newline": "off",
         "class-methods-use-this": "off",
         "func-names": "off",
+        "prefer-arrow-callback": "off",
         "prefer-destructuring": ["error", { "VariableDeclarator": { "array": false, "object": false }}],
         "no-mixed-operators": "off",
         "object-curly-newline": "off",

@@ -1,3 +1,5 @@
+import "./selection.scss"
+
 angular.module("medialib-selection", ["medialib"])
 
 .config((MedialibConfigProvider) => {
